@@ -1,35 +1,6 @@
 
 var main = function(){
   var imgcount =1;
-  var pview = function(){
-    switch(imgcount) {
-    case 1:
-            $('.img-01').show();
-            $('.img-02').hide();
-            $('.img-03').hide();
-            $('.img-04').hide();
-              break;
-    case 2:
-            $('.img-01').hide();
-            $('.img-02').show();
-            $('.img-03').hide();
-            $('.img-04').hide();
-            break;
-            case 3:
-                    $('.img-01').hide();
-                    $('.img-02').hide();
-                    $('.img-03').show();
-                    $('.img-04').hide();
-                    break;
-                    case 4:
-                            $('.img-01').hide();
-                            $('.img-02').hide();
-                            $('.img-03').hide();
-                            $('.img-04').show();
-                            break;
-                          }
-                        };
-
 
     $('#past').click(function(){
         $('#past').hide();
@@ -88,5 +59,34 @@ var main = function(){
     dot.removeClass('active-dot');
     prevDot.addClass('active-dot');
   });
+
+  var pview = function(){
+    switch(imgcount) {
+    case 1:
+            $('.img-01').show();
+            $('.img-02').hide();
+            $('.img-03').hide();
+            $('.img-04').hide();
+              break;
+    case 2:
+            $('.img-01').hide();
+            $('.img-02').show();
+            $('.img-03').hide();
+            $('.img-04').hide();
+            break;
+            case 3:
+                    $('.img-01').hide();
+                    $('.img-02').hide();
+                    $('.img-03').show();
+                    $('.img-04').hide();
+                    break;
+                    case 4:
+                            $('.img-01').hide();
+                            $('.img-02').hide();
+                            $('.img-03').hide();
+                            $('.img-04').show();
+                            break;
+                          }
+                        };
 };
 $(document).ready(main);
