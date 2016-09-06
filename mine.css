@@ -3,16 +3,17 @@
 body{
   position: static;
   background-image: url("img/background.jpg") ;
+  background-color: black;
   background-repeat: no-repeat;
   width: 760px;
-  height: 660px;
+  height: 760px;
   margin: 5px;
   color:white;
   padding: 5px;
 }
 
-.contain{
-
+.about{
+ width: 600px;
 }
 
 .skill{
@@ -26,6 +27,7 @@ margin: 5px;
 padding: 10px;
 font-size: 20px;
 display: inline-block;
+position: relative;
 }
 
 .center{

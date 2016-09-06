@@ -1,11 +1,14 @@
 
 var main = function(){
   var imgcount =1;
-
+  var width = screen.width;
+  var height = screen.height;
+  $('#width').text(width);
+  $('#height').text(height);
     $('#past').click(function(){
         $('#past').hide();
-        $('#ul').append('<li>誰無過去？！</li>');
-
+        $('#ul').append('<li class="ani">誰無過去？！</li>');
+        $('.ani').animate({ left: '200px' });
     });
 
   $('#about').click(function(){
