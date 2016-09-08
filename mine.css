@@ -1,60 +1,41 @@
 
-
 body{
   position: static;
-  background-image: url("img/background.jpg") ;
   background-color: black;
   background-repeat: no-repeat;
-  width: 1000px;
-  height: 1000px;
-  margin: 5px;
+  background-size: cover;
   color:white;
-  padding: 5px;
 }
 
-.about{
- width: 600px;
-}
 
 .skill{
   font-size: 1.8em;
   font-style: italic;
 }
 
-nav li{
+header li{
 color: white;
-margin: 5px;
-padding: 10px;
 font-size: 20px;
 display: inline-block;
 position: relative;
 }
 
-.center{
-  text-align: center;
-  margin: 10px 500px 0px 10px;
-  width: 640px;
-  height: 400px;
-}
-p{
-  margin: 5px;
-}
-
 .img{
   display: none;
   position: relative;
-  height: 300px;
+  max-width: 50%;
+  height: 500px;
 }
 
 .active-img{
   display: inline-block;
-  height: 300px;
+  max-width: 50%;
+  height: 500px;
 }
-
 
 .slider-dots {
   list-style: none;
-  display: inline-block;
+  display: inline;
   padding-left: 0;
   margin-bottom: 0;
 }
@@ -62,7 +43,7 @@ p{
 .slider-dots li {
   color: #bbbcbc;
   display: inline;
-  font-size: 30px;
+  font-size: 40px;
   margin-right: 5px;
 
 }
@@ -71,12 +52,9 @@ p{
   color: #333;
 }
 
-footer{
-height: 50px;
-text-align: center;
-bottom: 0px;
+p{
+  font-size: 2em;
 }
-
 
 strong:hover{
   color:yellow;

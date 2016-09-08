@@ -5,10 +5,17 @@ var main = function(){
   var height = screen.height;
   $('#width').text(width);
   $('#height').text(height);
+
+  $(document).on('keypress',function(){
+      $('.ii').text(this);
+
+  });
+
     $('#past').click(function(){
         $('#past').hide();
-        $('#ul').append('<li class="ani">誰無過去？！</li>');
+        $('#ul').append('<li class="ani">去掉框線</li>');
         $('.ani').animate({ left: '200px' });
+        $('*').css({border: '0px solid black' });
     });
 
   $('#about').click(function(){
@@ -38,8 +45,8 @@ var main = function(){
    pview();
 
 
-    img.slideUp(100).removeClass('active-img');
-    nextImg.slideDown(100).addClass('active-img');
+    img.slideUp(200).removeClass('active-img');
+    nextImg.slideDown(200).addClass('active-img');
     dot.removeClass('active-dot');
     nextDot.addClass('active-dot');
   });
