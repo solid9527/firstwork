@@ -22,7 +22,6 @@ position: relative;
 
 .img{
   display: none;
-  position: relative;
   max-width: 50%;
   height: 500px;
 }
@@ -43,9 +42,8 @@ position: relative;
 .slider-dots li {
   color: #bbbcbc;
   display: inline;
-  font-size: 40px;
+  font-size: 30px;
   margin-right: 5px;
-
 }
 
 .slider-dots li.active-dot {
