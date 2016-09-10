@@ -114,6 +114,28 @@ $('#random,#order').hover(function(){
 },function(){
  radomImg = setInterval(autoRun,3000);
 });
+
 };
 
 $(document).ready(main);
+
+
+function wordMath(){
+var pointcount = 0;
+var word= $('#input').val();
+    word= word.toLowerCase();
+var cutword = word.split('');
+var sheet = "abcdefghijklmnopqrstuvwxyz";
+var cutsheet = sheet.split('');
+
+for(var iw=0 ; iw<sheet.length ; iw++){
+   for(var jw=0 ; jw<word.length;jw++){
+     if(cutsheet[iw]===cutword[jw]){
+       pointcount = pointcount +iw+1;
+     }
+   }
+}
+alert(word+ ' 可以得到 ' + pointcount + ' 分！！');
+
+
+}
