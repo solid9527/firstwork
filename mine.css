@@ -23,13 +23,13 @@ position: relative;
 .img{
   display: none;
   max-width: 50%;
-  height: 500px;
+  height: 400px;
 }
 
 .active-img{
   display: inline-block;
   max-width: 50%;
-  height: 500px;
+  height: 400px;
 }
 
 .slider-dots {
@@ -42,7 +42,7 @@ position: relative;
 .slider-dots li {
   color: #bbbcbc;
   display: inline;
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 5px;
 }
 

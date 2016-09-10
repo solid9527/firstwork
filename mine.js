@@ -5,7 +5,7 @@ var main = function(){
   $('#width').text(width);
   $('#height').text(height);
 
-    $('#past').click(function(){
+  $('#past').click(function(){
         $('#past').hide();
         $('#ul').append('<li class="ani">去掉框線</li>');
         $('.ani').animate({ left: '200px' });
@@ -21,7 +21,8 @@ $('#skill').click(function(){  //技能
     $('.skill').slideToggle(300);
   });
 
-$('.arrow-next').click(function(){   //下張圖片
+
+var clickNext = function (){   //下張圖片
     imgcount++;
     var img = $('.active-img');
     var nextImg = img.next();
@@ -33,12 +34,21 @@ $('.arrow-next').click(function(){   //下張圖片
       nextDot = $('.dot').first();
     }
     pview();
-
     img.slideUp(200).removeClass('active-img');
     nextImg.slideDown(200).addClass('active-img');
     dot.removeClass('active-dot');
     nextDot.addClass('active-dot');
-  });
+  };
+
+
+var clock =setInterval(clickNext,2500);
+
+$(".img").mouseover(function(){
+  clearInterval(clock);
+});
+
+
+$('.arrow-next').click(clickNext);
 
 $('.arrow-prev').click(function(){  //上張圖片
     imgcount--;
@@ -59,17 +69,14 @@ $('.arrow-prev').click(function(){  //上張圖片
   });
 
 
-
 $('#rad').click(function(){
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
     $('.rad').css({color:'#' + randomColor });
 
 
-
-
 });
 
-var pview = function(){
+var pview = function(){     //判斷圖片編號
     switch(imgcount) {
     case 1:
             $('.img-01').show();
@@ -97,17 +104,18 @@ var pview = function(){
                             break;
                           }
                         };
+
 var jqimg = Array('3.jpg','4.jpg');
-setInterval(function(){
+
+var ss =setInterval(function(){
   var imgdexr = Math.floor(Math.random()*jqimg.length);  //亂數banner
-  $('#jqbanr').html('<img src=img/'+ jqimg[imgdexr] +' width=200 height=200 /> jq random' +Math.floor(Math.random()*jqimg.length));
+  $('#jqbanr').html('<img src=img/'+ jqimg[imgdexr] +' width=150 height=150 /> jq random' +Math.floor(Math.random()*jqimg.length));
   var imgdex = jqimg.length;  //循序banner
-  $('#jqban').html('<img src=img/'+ jqimg[i] +' width=200 height=200 /> jq order' +Math.floor(Math.random()*jqimg.length));
+  $('#jqban').html('<img src=img/'+ jqimg[i] +' width=150 height=150 /> jq order' +Math.floor(Math.random()*jqimg.length));
 i++;
 if(i>=imgdex)
    i=0;
-},2000);
-
+},3000);
 
 };
 var i=0;
@@ -116,7 +124,7 @@ var jsImg = new Array("3.jpg","4.jpg");
       var banner =   function randomImg(){
          //陣列的長度 * 介於0~1間數字 ，然後在取 floor 當照片索引值
       var imgIndex = Math.floor(Math.random()*jsImg.length);
-      document.getElementById("banner").innerHTML  = "<img src=img/"+jsImg[imgIndex]+" width=200 height=200>by js random"+imgIndex;
+      document.getElementById("banner").innerHTML  = "<img src=img/"+jsImg[imgIndex]+" width=150 height=150>by js random"+imgIndex;
        };
-setInterval(banner,2000);
+
 $(document).ready(main);
