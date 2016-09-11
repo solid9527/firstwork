@@ -115,6 +115,13 @@ $('#random,#order').hover(function(){
  radomImg = setInterval(autoRun,3000);
 });
 
+$('#input').keydown(function(event){
+  if(event.which===13){
+    wordMath();
+  }
+
+});
+
 };
 
 $(document).ready(main);
@@ -136,6 +143,5 @@ for(var iw=0 ; iw<sheet.length ; iw++){
    }
 }
 alert(word+ ' 可以得到 ' + pointcount + ' 分！！');
-
 
 }
