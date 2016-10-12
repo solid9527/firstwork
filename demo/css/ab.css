@@ -1,0 +1,20 @@
+body {
+  background-color: #1d1d22;
+}
+header {
+  width: 100%;
+}
+
+.top {
+  width: 80%;
+  color: white;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+ul{
+  display: inline-block;
+}
+ul > li{
+  display: inline-block;
+}
