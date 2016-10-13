@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="mine.css">
-<script src="jquery-3.1.0.min.js" type="text/javascript"></script>
-<script src="mine.js" type="text/javascript"></script>
-<title>
-  自我介紹
-</title>
-</head>
-<body>
- <div class="contain">
-  <header>
-  <nav>
-    <ul id="ul">
-      <li id="about">簡介</li>
-      <li id="skill">技能</li>
-      <li id="past">過去</li>
-    </ul>
-  </nav>
-</header>
 
-<div class="about" hidden>
-  葉志堯 Frank Yeah 桃園市八德區人 畢業於台中技術學院資訊管理系（現為台中科技大學）
-  <div class="center" >
-   <div class="imgQ">
-   <img class="img active-img"  src="1.JPG" >
-   <img class="img" src="2.jpg" >
-   <img class="img" src="img/3.jpg" >
-   <img class="img" src="img/4.jpg" >
-   </div>
-   <p class="img-01" hidden>濾鏡總能解決一切</p>
-   <p class="img-02" hidden>在大學時才開始學吉他 21屆器材長</p>
-   <p class="img-03" hidden>外號本丸 也有人叫我<span>青蛙</span> 因為像<strong>kururu 囧</strong></p>
-   <p class="img-04" hidden>對於任何事物總是先思考而不是盲目的跟從</p>
-    <div class="slider-nav">
-      <a href="#" class="arrow-prev"><img src="img/arrow-prev.png"></a>
-      <ul class="slider-dots">
-        <li class="dot active-dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-      </ul>
-      <a href="#" class="arrow-next"><img src="img/arrow-next.png"></a>
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="mine.css">
+    <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="js/mine.js" type="text/javascript"></script>
+    <title>
+        自我介紹
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="row">
+            <nav>
+                <ul id="ul" class="nav navbar-header navbar-fixed-top" style="background-color:black;">
+                    <li id="about" class="col-lg-2 btn active"><a href="#">簡介</a></li>
+                    <li id="skill" class="col-lg-2 btn "><a href="#">技能</a></li>
+                    <li id="atom" class="col-lg-2 btn "><a href="#">插件記錄</a></li>
+                    <li class="col-lg-2 btn"><a class="none" role="button" href="music/index.html">切板</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="atom" hidden>
+            <p>
+                <ul class="nav">
+                    <li>highlight-selected</li>
+                    <li>file-icons</li>
+                    <li>editconfig</li>
+                    <li>less than slash</li>
+                    <li>emmet</li>
+                </ul>
+            </p>
+        </div>
+        <div class="about threeline lead  h2 rad" hidden>　　葉志堯(Frank)，畢業於台中技術學院資訊管理系（現為<u>台中科技大學</u>）， 曾任吉他社器材長，興趣是聽音樂、戶外運動
+            <del>(打野)</del>，喜歡看些<s>奇怪</s>科技論壇了解新興事物。
+            <!-- press <kbd>A</kbd> to display. -->
+        </div>
+        <div class="about text-center" hidden>
+            <div>
+                <img class="img active-img img-thumbnail" src="img/1.jpg" alt="color me rad">
+                <img class="img img-thumbnail" src="img/2.jpg" alt="guitar club">
+                <img class="img img-thumbnail" src="img/3.jpg" alt="like frog">
+                <img class="img img-thumbnail" src="img/4.jpg" alt="???">
+            </div>
+
+            <p class="img-01" hidden><span id="rad">color rad click me to change color</span></p>
+            <p class="img-02" hidden>大學參加吉他社 偶爾可以彈彈琴</p>
+            <p class="img-03" hidden>外號本丸 也有人叫我<span>青蛙</span> 因為像<strong>kururu 囧</strong></p>
+            <p class="img-04" hidden>對於任何事物總是先思考而不是盲目的跟從</p>
+            <div class="slider-nav">
+                <a href="#" class="arrow-prev"><img src="img/arrow-prev.png"></a>
+                <ul class="slider-dots ">
+                    <li class="dot active-dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                </ul>
+                <a href="#" class="arrow-next"><img src="img/arrow-next.png"></a>
+            </div>
+        </div>
+        <div class="skill" hidden>
+            <span id='html'>HTML</span> <span id="css">CSS</span> <span id="css">bootstrap</span> <span>Javascript</span> <span>jQuery</span>
+            <blockquote>
+                <email>solid9527@gmail.com</email>
+            </blockquote>
+        </div>
+        <div class="row col-lg-10 ">
+            如果將字母A到Z分別編上1到26的分數（A=1,B=2...,Z=26）<br> 你的知識（KNOWLEDGE）得到96分（11+14+15+23+12+5+4+7+5=96）
+            <br> 你的努力（HARDWORK）也只得到98分（8+1+18+4+23+15+18+11=98）
+            <br> 你的態度（ATTITUDE）能左右你生命的全部（1+20+20+9+20+21+4+5=100）
+            <br> 得了火山矽肺病（PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS）可以有560分
+            <br> 但你只要一直睡覺（zzzzzzZZZZZZZ....）就能擁有趨近無限大的分數喔！
+            <br>
+            <input id="input" type="text" class="form-group-lg" style="color:black" placeholder="試試你的英文名字得幾分">
+            <button class="btn btn-primary " onclick="wordMath()" style="color:black">do it!! </button>
+            <div class="end"></div>
+        </div>
+        <div class="row">
+            <div id="random" class="col-lg-6">
+            </div>
+            <div id="order" class="col-lg-6">
+            </div>
+        </div>
+        <img src="img/1341818841554333.png" />
+        <footer class="text-center"> &copy; <time>2016</time>, Frank<br>made by bootstrap<br> 你的解析度為
+            <span id="width"></span>*<span id="height"></span>
+            <p class="ii"></p>
+        </footer>
     </div>
- </div>
-</div>
-<div class="skill" hidden>
-<span id='html'>HTML</span>  <span id="css">CSS</span>  <span id="jQ">jQuery</span> <span id="js">Javascript</span>
-</div>
-</div>
-<footer>	&copy; <time>2016</time>, Frank
-</footer>
 </body>
+
 </html>
