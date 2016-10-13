@@ -41,10 +41,9 @@ ul li {
     float: right;
 }
 
-body{
-  font-family: serif;
+body {
+    font-family: sans-serif;
 }
-
 
 .cover {
     display: -webkit-flex;
@@ -67,6 +66,10 @@ body{
 .news {
     width: 100%;
     margin: 0 auto;
+}
+
+.newsP {
+    font-weight: bold;
 }
 
 .news2 {
@@ -98,6 +101,7 @@ body{
 
 .was {
     font-size: 60;
+    font-weight: bold;
 }
 
 .allartists {
@@ -176,8 +180,8 @@ body{
 
 .artlist {
     display: inline-block;
-    padding: 0;
-    width: 20%;
+    padding-left: 5px;
+    width: 24%;
 }
 
 .art {
@@ -185,9 +189,9 @@ body{
     font-size: 20px;
 }
 
-.playlist{
-  width: 100%;
-  position: relative;
+.playlist {
+    width: 100%;
+    position: relative;
 }
 
 .playlist2 {
@@ -262,18 +266,20 @@ body{
     width: 70%;
     margin: 0 auto;
     text-align: center;
-
 }
-
-
 
 .eventrow {
     display: table-row;
     border: 10px white solid;
 }
 
-.eventrow1{
+.eventrow1 {
     background-color: black;
+    color: #b9b9ba;
+}
+
+.eventrow2, .eventrow3, .eventrow4 {
+    background-color: #fafafa;
 }
 
 .eventcol {
@@ -286,12 +292,75 @@ body{
     padding: 20px;
     border-radius: 50px;
     color: black;
-}
-strong{
-  font-size: 1.2em;
+    font-weight: bold;
 }
 
-.td1{
-  color:white;
-  background-color: black;
+.reservew {
+    font-size: 20px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+strong {
+    font-size: 1.2em;
+}
+
+.td1 {
+    color: white;
+    background-color: black;
+}
+
+.eventP1 {
+    color: #b9b9ba;
+}
+
+.instagram {
+    width: 100%;
+
+}
+
+.instagram2 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.coverbar {
+      background-color: black;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coverbar img {
+    width: 19.7%;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+}
+
+.footer {
+    width: 70%;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.foot1, .foot2, .foot3, .foot4 {
+    float: left;
+    width: 25%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footP{
+  color: #9f9f9f;
+}
+
+.tramark {
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
 }
