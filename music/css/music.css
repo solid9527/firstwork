@@ -179,6 +179,7 @@ body {
 }
 
 .artlist {
+    opacity: 0.3;
     display: inline-block;
     padding-left: 5px;
     width: 24%;
@@ -319,26 +320,32 @@ strong {
 
 .instagram {
     width: 100%;
-
 }
 
 .instagram2 {
+    position: relative;
     width: 70%;
     margin: 0 auto;
 }
 
 .coverbar {
-      background-color: black;
+    position: absolute;
+    background-color: black;
     width: 100%;
+    height: 350px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .coverbar img {
-    width: 19.7%;
+    top: 0;
+    position: absolute;
 }
 
 footer {
-    width: 100%;
+    position: relative;
+    top: 350px;
+    width: 1460px;
     background-color: black;
 }
 
@@ -355,8 +362,8 @@ footer {
     padding: 10px;
 }
 
-.footP{
-  color: #9f9f9f;
+.footP {
+    color: #9f9f9f;
 }
 
 .tramark {
@@ -364,8 +371,9 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
-#mailicon{
-  padding: 5px;
-  height: 30px;
-  background: url(../img/mailicon.png) no-repeat right ;
+
+#mailicon {
+    padding: 5px;
+    height: 30px;
+    background: url(../img/mailicon.png) no-repeat right;
 }

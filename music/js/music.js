@@ -1,30 +1,48 @@
 var main = function() {
 
+    var scrollTo = function(a) {
+        $('html,body').animate({
+            scrollTop: $(a).offset().top
+        }, 800);
+
+    };
+
     $('.allartists').click(function() {
-        $('html,body').animate({
-            scrollTop: $('.artistslist').offset().top
-        }, 800);
+        scrollTo('.artistslist');
     });
 
-    $('.tonews').click(function() {
-        $('html,body').animate({
-            scrollTop: $('.news').offset().top
-        }, 800);
-
-    });
-    var old = $('.tonews').css('color');
-    $('.tonews').hover(function() {
-        $('.tonews').css('color', 'white');
-    }, function() {
-        $('.tonews').css('color', old);
-
+    $('.toNews').click(function() {
+        scrollTo('.news');
     });
 
-    $('.playrow').click(function(){
+    //$('.toEvent').click(scrollTo('.eventslist'));
+
+    $('.toEvent').click(function() {
+        scrollTo('.eventslist');
+    });
+
+    $('.toPhoto').click(function() {
+        scrollTo('.instagram');
+    });
+
+    $('.playrow').click(function() {
         $('.playrow').removeClass('playactive');
-      $(this).addClass('playactive');
-        $('.playrow').find('img').attr('src','img/play.png');
-      $('img',this).attr('src','img/active.png');
+        $(this).addClass('playactive');
+        $('.playrow').find('img').attr('src', 'img/play.png');
+        $('img', this).attr('src', 'img/active.png');
+    });
+
+    $('.coverBar').hover(function() {
+        clearInterval(t);
+    }, function() {
+        t = setInterval(scrollImages, 15);
+    });
+
+    var artlistpre = $('.artlist').css('opacity');
+    $('.artlist').hover(function() {
+        $(this).css('opacity', '1');
+    }, function() {
+        $('.artlist').css('opacity', artlistpre);
     });
 };
 $(document).ready(main);

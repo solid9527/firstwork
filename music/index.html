@@ -6,6 +6,7 @@
     <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/music.js" type="text/javascript"></script>
+    <script src="js/func.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -21,10 +22,10 @@
                 </div>
                 <ul>
                     <li><img src="img/al.png" alt=""></li>
-                    <li class="tonews">News</li>
+                    <li class="toNews">News</li>
                     <li>Video</li>
-                    <li>Event</li>
-                    <li>Photo</li>
+                    <li class="toEvent">Event</li>
+                    <li class="toPhoto">Photo</li>
                     <li>Shop</li>
                     <li><img class="logo" src="img/logo.png" alt=""></li>
 
@@ -283,12 +284,13 @@
             <div class="instagram2">
                 <h2 class="was">/instagram</h2>
             </div>
-            <div class="coverbar row">
+            <div id="coverBar" class="coverbar row">
                 <img src="img/ins1.png" alt="" style="left: 0px;">
-                <img src="img/ins2.png" alt="">
-                <img src="img/ins3.png" alt="">
-                <img src="img/ins4.png" alt="">
-                <img src="img/ins5.png" alt="">
+                <img src="img/ins2.png" alt="" style="left: 390px;">
+                <img src="img/ins3.png" alt="" style="left: 780px;">
+                <img src="img/ins4.png" alt="" style="left: 1170px;">
+                <img src="img/ins5.png" alt="" style="left: 1560px;">
+                <img src="img/ins1.png" alt="" style="left: 1950px;">
             </div>
 
         </section>
@@ -298,16 +300,16 @@
                   Lorem ipsun dolor sit amet. consectetur adipiscing edit Lorem ipstum
                 </p></div>
                 <div class="foot2">
-                    <p>
+                    <p class="toNews">
                         NEWS
                     </p>
                     <p>
                         VIDEO
                     </p>
-                    <p>
+                    <p class="toPhoto">
                         PHOTOS
                     </p>
-                    <p>
+                    <p class="toEvent">
                         EVENTS
                     </p>
                     <p>
