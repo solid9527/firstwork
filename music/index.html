@@ -11,7 +11,34 @@
 
 <body>
     <div class="content">
+      <div class="bb">
+      <nav id="menu" class="left">
+
+              <ul class="mb">
+                  <li><a href="#" class="active">Home</a></li>
+                  <li><a class="toNews" href="#">News</a></li>
+                  <li><a class="toEvent" href="#">Event</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+
+              <a href="#" id="showmenu" >&#9776;<i class="fa fa-align-justify"></i> </a> <!--選單按鈕-->
+          </nav>
+</div>
+             <script>
+                 $("#showmenu").click(function (e) { //點擊選單按鈕時
+                     e.preventDefault(); //停止
+                     $("#menu").toggleClass("show"); //在#menu增加Class
+                 });
+                 $("#menu a").click(function (event) {
+                     event.preventDefault();
+                     if ($(this).next('ul').length) {
+                         $(this).next().toggle('fast');
+                         $(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left'); //展開子選單時改變Class
+                     }
+                 });
+             </script>
         <header>
+
             <div class="header">
                 <div class="search">
                     <img class="topimg" src="img/usericon.png" alt="usericon"> welcome ,
@@ -20,7 +47,8 @@
                     <img class="topimg" src="img/searchicon.png" alt="">
                     <img class="topimg" src="img/buy.png" alt="">
                 </div>
-                <ul>
+
+                <ul class="menu">
                     <li><img src="img/al.png" alt=""></li>
                     <li class="toNews">News</li>
                     <li>Video</li>
@@ -123,10 +151,8 @@
             <div class="services2">
                 <h1 class="was">/services</h1>
 
-                <div class="ser"><img src="img/ser1.png" alt="complex recording"></div>
-                <div class="ser"><img src="img/ser2.png" alt="mixing mastering"></div>
-                <div class="ser"><img src="img/ser3.png" alt="production"></div>
-                <div class="ser"><img src="img/ser4.png" alt="industries"></div>
+                <div class="ser"><img src="img/ser1.png" alt="complex recording"><img src="img/ser2.png" alt="mixing mastering"></div>
+                <div class="ser"><img src="img/ser3.png" alt="production"><img src="img/ser4.png" alt="industries"></div>
 
             </div>
         </section>
@@ -325,7 +351,7 @@
                   </p><p>
                     <input id="mailicon" type="text" name="name" value="">
                   </p></div>
-                <div class="tramark">&copy; 2016 web pratice 00</div>
+                <div class="tramark">&copy; 2016 </div>
             </div>
         </footer>
 </body>

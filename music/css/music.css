@@ -10,6 +10,129 @@ header {
     width: 100%;
 }
 
+#menu {
+    display: none;
+    position: fixed;
+    background-color: #222;
+    height: 100%;
+    z-index: 2;
+    width: 200px;
+    color: #bbb;
+    top: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu ul {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+#menu>ul>li>a {
+    border-left: 4px solid #222;
+}
+
+#menu ul li a {
+    color: inherit;
+    font-size: 16px;
+    display: block;
+    padding: 8px 0 8px 7px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 60;
+}
+
+#menu ul a i {
+    margin-right: 10px;
+    font-size: 18px;
+    margin-top: 3px;
+    width: 50px;
+}
+
+
+
+#menu ul a:hover, #menu ul a.active {
+    background-color: #111;
+    width: 100px;
+    border-left-color: #FFCC33;
+    color: #FFCC33;
+}
+
+#menu ul a:hover  {
+    color: #FFCC33;
+}
+
+#menu ul li a.active+ul {
+    display: block;
+}
+
+#menu ul li ul {
+    margin-top: 0;
+    display: none;
+}
+
+.left {
+    left: -200px;
+}
+
+.show {
+    left: -50;
+}
+
+#showmenu {
+    margin-left: 100%;
+    position: absolute;
+    top: 0;
+    padding: 6px 10px 7px 10px;
+    font-size: 1.3em;
+    color: #FFCC33;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle {
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 15px;
+    display: none;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1250px) {
+    #menu-toggle {
+        display: block;
+    }
+    ul {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+    .mb {
+        width: 20%;
+        display: block;
+    }
+    .aboutus{
+      display: none;
+    }
+}
+
 .header {
     width: 70%;
     margin: 0 auto;
@@ -158,7 +281,7 @@ body {
 
 .ser {
     display: inline-block;
-    width: 48%;
+    width: 100%;
 }
 
 .artistslist {
@@ -182,6 +305,7 @@ body {
     opacity: 0.3;
     display: inline-block;
     padding-left: 5px;
+    min-width: 150px;
     width: 24%;
 }
 
@@ -345,7 +469,7 @@ strong {
 footer {
     position: relative;
     top: 350px;
-    width: 1460px;
+    width: 100%;
     background-color: black;
 }
 

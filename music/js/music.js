@@ -1,10 +1,15 @@
 var main = function() {
 
+  $('#menu-toggle').click(function() { //關於
+      $('.mobilenav').fadeToggle(300);
+  });
+
+
+
     var scrollTo = function(a) {
         $('html,body').animate({
             scrollTop: $(a).offset().top
         }, 800);
-
     };
 
     $('.allartists').click(function() {

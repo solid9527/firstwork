@@ -11,7 +11,7 @@ function keyFunction() { //偵側鍵盤代碼
         return false;
     } else if (event.keyCode == 71) {
         document.location = "http://www.google.com";
-    } else if (event.keyCode == 65) { //按a捲動COVERBAR
+    } else if (event.keyCode == 65) {   //按a捲動COVERBAR
         var images = $('#coverBar img');
         for (var i = 0; i < images.length; i++) {
             var left = images[i].style.left.substr(0, images[i].style.left.length - 2);
@@ -31,7 +31,6 @@ function scrollImages() {
 
     for (var i = 0; i < images.length; i++) {
         var left = images[i].style.left.substr(0, images[i].style.left.length - 2);
-
         if (left <= -390) {
             left = 1950;
         }
