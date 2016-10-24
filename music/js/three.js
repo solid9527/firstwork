@@ -37,6 +37,6 @@ var rad = function() {
         console.log(arrNum);
 
     }
-  arrNum=  arrNum.sort();
+  arrNum =  arrNum.sort();
     $('.num').append(arrNum +"<br>");
 };
