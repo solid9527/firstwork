@@ -1,67 +1,66 @@
+$(function() {
+  var imgcount = 1;
+  var pview = function() {
+    switch (imgcount) {
+      case 1:
+        $('.img-01').show();
+        $('.img-02').hide();
+        $('.img-03').hide();
+        $('.img-04').hide();
+        break;
+      case 2:
+        $('.img-01').hide();
+        $('.img-02').show();
+        $('.img-03').hide();
+        $('.img-04').hide();
+        break;
+      case 3:
+        $('.img-01').hide();
+        $('.img-02').hide();
+        $('.img-03').show();
+        $('.img-04').hide();
+        break;
+      case 4:
+        $('.img-01').hide();
+        $('.img-02').hide();
+        $('.img-03').hide();
+        $('.img-04').show();
+        break;
+    }
+  };
 
-var main = function(){
-  var imgcount =1;
-  var pview = function(){
-    switch(imgcount) {
-    case 1:
-            $('.img-01').show();
-            $('.img-02').hide();
-            $('.img-03').hide();
-            $('.img-04').hide();
-              break;
-    case 2:
-            $('.img-01').hide();
-            $('.img-02').show();
-            $('.img-03').hide();
-            $('.img-04').hide();
-            break;
-            case 3:
-                    $('.img-01').hide();
-                    $('.img-02').hide();
-                    $('.img-03').show();
-                    $('.img-04').hide();
-                    break;
-                    case 4:
-                            $('.img-01').hide();
-                            $('.img-02').hide();
-                            $('.img-03').hide();
-                            $('.img-04').show();
-                            break;
-                          }
-                        };
 
+  $('#past').click(function() {
+    $('#past').hide();
+    $('#ul').append('<li>誰無過去？！</li>');
 
-    $('#past').click(function(){
-        $('#past').hide();
-        $('#ul').append('<li>誰無過去？！</li>');
+  });
 
-    });
-
-  $('#about').click(function(){
+  $('#about').click(function() {
     $('.about').fadeToggle();
     pview();
   });
 
-  $('#skill').click(function(){
+  $('#skill').click(function() {
     $('.skill').slideToggle(800);
   });
 
-  $('#fu').click(function(){
+  $('#fu').click(function() {
     $('.img').addClass('active-img');
   });
 
-  $('.arrow-next').click(function(){
+  $('.arrow-next').click(function() {
     imgcount++;
     var img = $('.active-img');
     var nextImg = img.next();
     var dot = $('.active-dot');
     var nextDot = dot.next();
-    if(nextImg.length===0){
+    if (nextImg.length === 0) {
       nextImg = $('.img').first();
-      imgcount=1;
+      imgcount = 1;
       nextDot = $('.dot').first();
     }
-   pview();
+    pview();
 
 
     img.slideUp(100).removeClass('active-img');
@@ -70,23 +69,42 @@ var main = function(){
     nextDot.addClass('active-dot');
   });
 
-  $('.arrow-prev').click(function(){
+  $('.arrow-prev').click(function() {
     imgcount--;
     var img = $('.active-img');
     var prevImg = img.prev();
     var dot = $('.active-dot');
     var prevDot = dot.prev();
-    if(prevImg.length ===0){
+    if (prevImg.length === 0) {
       prevImg = $('.img').last();
-      imgcount=4;
+      imgcount = 4;
       prevDot = $('.dot').last();
     }
-       pview();
+    pview();
 
     img.slideUp(200).removeClass('active-img');
     prevImg.slideDown(200).addClass('active-img');
     dot.removeClass('active-dot');
     prevDot.addClass('active-dot');
   });
-};
-$(document).ready(main);
+
+
+});
+
+let eng = "abcdefghigklmnopqrstuvwxyz";
+let eng_array = eng.split('');
+
+
+function wordMath() {
+  let string = $('#score').val().toLowerCase();
+  let score = 0;
+  string.length;
+
+  let string_array = string.split('');
+
+
+  string_array.map(function(num) {
+    score = score + eng_array.indexOf(num) + 1;
+  });
+
+}
